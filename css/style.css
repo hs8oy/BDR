@@ -1,0 +1,359 @@
+/* ===== FONT ARBIC ===== */
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Cairo:wght@200..1000&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  scroll-behavior: smooth;
+  box-sizing: border-box;
+  font-family: "Cairo", sans-serif;
+}
+
+/* ===== FIRST HEADER ===== */
+.btn-t{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.st-btn{
+  margin: 10px;
+  background: #000000;
+  color: #fff;
+  padding: 4px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.logo img {
+  width: 70px;
+}
+.sher{
+  display: flex;
+  align-items: center;
+
+}
+
+#backButton{
+  
+  font-weight: 700;
+  padding: 5px;
+  background: #d29949;
+  color: #fff;
+  border-radius: 5px;
+
+}
+
+#searchInput {
+  font-weight: 600;
+  border-radius: 4px;
+  padding: 5px;
+  color: black;
+}
+
+#searchBtn {
+  font-weight: 700;
+  padding: 5px;
+  background: #000000;
+  color: #fff;
+  border-radius: 5px;
+}
+
+header {
+  width: 100%;
+  background: #2e2e2e;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  border-radius: 0 0 10px 20px;
+  margin: 0 auto;
+  position: fixed;
+  z-index: 999;
+}
+
+nav .logo {
+  display: none;
+}
+
+nav ul {
+  display: flex;
+  align-items: center;
+}
+
+nav ul li .active {
+  text-shadow: 1px 3px 3px black;
+  transform: scale(1.1);
+  background: rgba(255, 255, 255, 0.356);
+  border-radius: 12px;
+}
+
+nav ul li a {
+  font-size: 15px;
+  font-weight: 700;
+  color: #fff;
+  display: block;
+  margin: 0 5px;
+  padding: 8px 10px;
+  transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+  text-shadow: 1px 3px 3px black;
+  transform: scale(1.1);
+  background: rgb(0, 0, 0);
+  border-radius: 12px;
+}
+
+.hamburger {
+  display: none;
+  height: fit-content;
+  cursor: pointer;
+  padding: 3px 8px;
+  border-radius: 5px;
+  transition: 0.4s ease;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 2px;
+  margin: 6px 0;
+  background: #fff;
+}
+
+/* ===== END HEADER ===== */
+
+/*  */
+
+.title2 {
+  display: flex;
+  justify-content: center;
+  color: rgb(255, 255, 255);
+  text-shadow: 4px 3px 5px rgb(0, 0, 0);
+  letter-spacing: 1px;
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.st {
+  background: #000016;
+  color: #fff;
+  padding-top: 200px;
+  padding-bottom: 100px;
+  font-family: "Poppins", sans-serif;
+}
+
+.st .di {
+  font-size: 35px;
+  display: flex;
+  align-items: center;
+  margin: 0 60px;
+  margin-bottom: 250px;
+}
+
+.st .container {
+  margin-top: 60px;
+  display: flex;
+  overflow-x: auto;
+  border-radius: 12px;
+  overflow-y: hidden;
+}
+
+.st-card {
+  background: #fff;
+  border: 3px solid #000000;
+  border-radius: 10px;
+  margin: 5px;
+  padding: 10px 40px;
+  transition: 0.5s ease;
+}
+
+.st-card:hover {
+  box-shadow: 0px 1px 30px rgb(0, 0, 0);
+}
+
+.st-img {
+  width: 230px;
+}
+
+.st-name {
+  color: black;
+  text-align: center;
+  font-size: 16px;
+}
+
+.st-title {
+  margin: 10px 0;
+  color: black;
+  margin-left: 10px;
+  text-align: center;
+  font-size: 15wpx;
+  font-weight: 600;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px; /* المسافة بين الصفوف */
+}
+
+.row {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow-x: auto; /* السماح بالتمرير الأفقي */
+  padding-bottom: 10px; /* إضافة مساحة صغيرة لتجنب قطع التمرير */
+}
+
+.row::-webkit-scrollbar {
+  height: 10px; /* عرض شريط التمرير */
+}
+
+.row::-webkit-scrollbar-thumb {
+  background: #888; /* لون شريط التمرير */
+  border-radius: 4px; /* جعل الحواف دائرية */
+}
+
+.row::-webkit-scrollbar-thumb:hover {
+  background: #555; /* لون شريط التمرير عند التمرير */
+}
+
+footer {
+  font-family: "Poppins", sans-serif;
+  background: #2e2e2e;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px 40px;
+}
+
+footer h1 {
+  font-size: 17px;
+}
+
+footer div a {
+  color: #fff;
+  padding-left: 15px;
+  transition: 0.6s;
+}
+
+footer div a:hover {
+  color: #cc00ff;
+  transform: scale(1.1);
+}
+
+@media only screen and (max-width: 850px) {
+  header {
+    width: 100%;
+    padding: 0 20px;
+  }
+
+  nav {
+    position: absolute;
+    right: -500px;
+    top: 0;
+    z-index: 999;
+    width: 330px;
+    height: 100vh;
+    background: #2e2e2e;
+    transition: 0.3s ease;
+    box-shadow: 2px 0 2px 0 #130505;
+  }
+
+  #nav-check:checked ~ nav {
+    right: 0;
+  }
+
+  nav .logo {
+    display: block;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  nav ul li a {
+    margin-bottom: 25px;
+    padding: 10px 15px;
+  }
+
+  nav ul {
+    display: block;
+    padding: 0 20px;
+    margin-top: 30px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  .st .di {
+    font-size: 30px;
+  }
+}
+
+@media only screen and (max-width: 620px) {
+  .st .title2 {
+    font-size: 20px;
+  }
+
+  .st-img {
+    width: 200px;
+  }
+
+  .Order {
+    font-size: 15px;
+  }
+
+  .infor {
+    padding: 5px 5px;
+  }
+
+  .st .di {
+    font-size: 25px;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  #searchBtn {
+    font-size: 12px;
+  }
+
+  #searchInput {
+    font-size: 12px;
+  }
+
+  .st-card {
+    padding: 10px 20px;
+  }
+
+  .st .di {
+    font-size: 20px;
+    margin-bottom: 90px;
+  }
+  .st-img {
+    width: 150px;
+  }
+
+  .st-name {
+    font-size: 14px;
+  }
+
+  .st-title {
+    font-size: 12px;
+  }
+
+  footer {
+    display: block;
+    text-align: center;
+  }
+
+  footer h1 {
+    font-size: 17px;
+    padding-bottom: 15px;
+  }
+
+  .st-btn{
+ font-size: 12px;
+    padding: 2px;
+  }
+}
