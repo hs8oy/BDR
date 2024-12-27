@@ -16,8 +16,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
+  
 }
 .st-btn{
+  cursor: pointer;
   margin: 10px;
   background: #000000;
   color: #fff;
@@ -38,7 +40,7 @@
   
   font-weight: 700;
   padding: 5px;
-  background: #d29949;
+  background: #b580371e;
   color: #fff;
   border-radius: 5px;
 
@@ -47,16 +49,17 @@
 #searchInput {
   font-weight: 600;
   border-radius: 4px;
-  padding: 5px;
-  color: black;
+  padding: 6px;
+  margin-left: 2px;
 }
 
 #searchBtn {
+  cursor: pointer;
   font-weight: 700;
-  padding: 5px;
   background: #000000;
   color: #fff;
   border-radius: 5px;
+  padding: 6px;
 }
 
 header {
@@ -119,6 +122,40 @@ nav ul li a:hover {
   height: 2px;
   margin: 6px 0;
   background: #fff;
+  height: 3px;
+  border-radius: 5px;
+  transition: all 0.3s;
+}
+nav.open {
+  right: 0;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+.hamburger.open div:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.open div:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburger.open div:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
 }
 
 /* ===== END HEADER ===== */
@@ -353,7 +390,7 @@ footer div a:hover {
   }
 
   .st-btn{
- font-size: 12px;
+ font-size: 11px;
     padding: 2px;
   }
 }
