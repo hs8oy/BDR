@@ -2,12 +2,18 @@
 <html lang="ar" dir="rtl">
   <head>
     <meta charset="UTF-8" />
-   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <!--=============== INFOMATION  ===============-->
-    <meta name="description" content="هـنـا اسـعـار كـل تـقـاسـيـم مـتـجـر BDR">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="keywords" content="BDR , bdr , العطور , عطور , عطور اصلية , عطر سوفاج , جان بول , ديور , عطور بدر ">
-    <meta name="author" content="hs8oy">
+    <meta
+      name="description"
+      content="هـنـا اسـعـار كـل تـقـاسـيـم مـتـجـر BDR"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="keywords"
+      content="BDR , bdr , العطور , عطور , عطور اصلية , عطر سوفاج , جان بول , ديور , عطور بدر "
+    />
+    <meta name="author" content="hs8oy" />
     <title>مـتـجـر BDR | الــمــتـجـر</title>
     <!--=============== LINK IN CSS  ===============-->
     <link rel="stylesheet" href="css/style.css" />
@@ -27,24 +33,6 @@
       <div class="logo">
         <img src="imgs/logo/logo-p.jpg" />
       </div>
-      <input type="checkbox" id="nav-check" hidden />
-      <nav>
-        <div class="logo">
-          <img src="imgs/logo/logo-p.jpg" />
-        </div>
-        <ul>
-          <li>
-            <a href="https://hs8oy.github.io/BDR/" class="active"
-              >الـرئـيـسـيـة</a
-            >
-          </li>
-          <li>
-            <a href="https://hs8oy.github.io/BDR/index-c.html"
-              >تـواصـل مـعـنـا</a
-            >
-          </li>
-        </ul>
-      </nav>
 
       <div class="sher">
         <!-- رسالة التحذير (تظهر عند ترك الحقل فارغًا) -->
@@ -62,13 +50,32 @@
         <button id="backButton" style="display: none">رجوع</button>
       </div>
 
-      <label for="nav-check" class="hamburger">
+      <div class="hamburger" id="hamburger">
         <div></div>
         <div></div>
         <div></div>
-      </label>
+      </div>
+
+      <nav id="nav">
+        <div class="logo">
+          <img src="imgs/logo/logo-p.jpg" />
+        </div>
+        <ul>
+          <li>
+            <a href="https://hs8oy.github.io/BDR/" class="active"
+              >الـرئـيـسـيـة</a
+            >
+          </li>
+          <li>
+            <a href="https://hs8oy.github.io/BDR/index-c.html"
+              >تـواصـل مـعـنـا</a
+            >
+          </li>
+        </ul>
+      </nav>
+
+      <div class="overlay" id="overlay"></div>
     </header>
-    <!--=============== END HEADER  ===============-->
 
     <section class="st">
       <div class="di">
@@ -124,7 +131,23 @@
       </div>
     </footer>
 
+    <script>
+      const hamburger = document.getElementById("hamburger");
+      const nav = document.getElementById("nav");
+      const overlay = document.getElementById("overlay");
+
+      hamburger.addEventListener("click", () => {
+        hamburger.classList.toggle("open");
+        nav.classList.toggle("open");
+        overlay.classList.toggle("active");
+      });
+
+      overlay.addEventListener("click", () => {
+        hamburger.classList.remove("open");
+        nav.classList.remove("open");
+        overlay.classList.remove("active");
+      });
+    </script>
     <script src="main.js"></script>
   </body>
 </html>
-
