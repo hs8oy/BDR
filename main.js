@@ -31,6 +31,7 @@ document.getElementById("searchBtn").addEventListener("click", function () {
         }
         return false;
     });
+    
 
     // إدارة الرسالة التحذيرية بناءً على وجود نتائج
     if (!hasResults) {
@@ -77,13 +78,15 @@ async function fetchProducts() {
             throw new Error(`HTTP error! status: ${response.status}`);
         }
         const products = await response.json();
-        displayProducts(products);
+        localStorage.setItem("productsData", JSON.stringify(products));  // تخزين المنتجات في localStorage
+  displayProducts(products);
     } catch (error) {
         console.error("Error loading products:", error);
     }
 }
 
 function displayProducts(products) {
+  const productsContainer = document.getElementById("productsContainer");
     let currentRow;
 
     products.forEach((product, index) => {
@@ -94,18 +97,28 @@ function displayProducts(products) {
         }
 
         const card = document.createElement("div");
-        card.classList.add("st-card", "product-card");
+  card.classList.add("st-card", "product-card");
 
-        card.innerHTML = `
-            <img class="st-img" src="${product.img}" alt="${product.name}">
-            <h3 class="st-name">${product.name}</h3>
-            <p class="st-title">${product.price.replace(/\n/g, "<br>")}</p>
-            
-             <div class="btn-t"><button class="st-btn" onclick="orderProduct('${product.name}')">طلب العطر</button></div>
-        `;
+  card.innerHTML = `
+    <img class="st-img" src="${product.img}" alt="${product.name}">
+    <h3 class="st-name">${product.name}</h3>
+    <p class="st-title">${product.price.replace(/\n/g, "<br>")}</p>
+    <div class="btn-t"><button class="st-btn" onclick="orderProduct('${product.name}')">طلب العطر</button>
+    <button class="st-btn" onclick="showProductInfo(${product.id})">معلومات</button></div>
+  `;
+  currentRow.appendChild(card);
+  
+});
 
-        currentRow.appendChild(card);
-    });
+
+}
+
+function showProductInfo(productId) {
+const products = JSON.parse(localStorage.getItem("productsData"));
+const product = products.find(p => p.id === productId);
+
+localStorage.setItem("currentProduct", JSON.stringify(product));  // تخزين المنتج المختار في localStorage
+window.location.href = "product-info.html";  // الانتقال إلى صفحة التفاصيل
 }
 
 function orderProduct(name) {
