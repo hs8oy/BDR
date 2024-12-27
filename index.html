@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ar" dir="rtl">
+<html lang="en" dir="rtl">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -14,9 +14,9 @@
       content="BDR , bdr , العطور , عطور , عطور اصلية , عطر سوفاج , جان بول , ديور , عطور بدر "
     />
     <meta name="author" content="hs8oy" />
-    <title>مـتـجـر BDR | الــمــتـجـر</title>
+    <title>مـتـجـر BDR | الاتـصـال</title>
     <!--=============== LINK IN CSS  ===============-->
-    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-c.css" />
     <!--=============== FONT AWESOME CDN  ===============-->
     <link
       rel="stylesheet"
@@ -25,6 +25,8 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <!--=============== LINK ICON ===============-->
+    <link rel="icon" href="imgs/logo/logo.icon" />
   </head>
 
   <body>
@@ -32,22 +34,6 @@
     <header>
       <div class="logo">
         <img src="imgs/logo/logo-p.jpg" />
-      </div>
-
-      <div class="sher">
-        <!-- رسالة التحذير (تظهر عند ترك الحقل فارغًا) -->
-        <p
-          id="warningMessage"
-          style="margin: 10px; font-weight: 600; color: red; display: none"
-        >
-          نص للبحث؟؟
-        </p>
-
-        <input type="text" id="searchInput" placeholder="بحث عن العطور..." />
-        <button id="searchBtn">بحث</button>
-
-        <!-- زر الرجوع (يكون مخفيًا افتراضيًا) -->
-        <button id="backButton" style="display: none">رجوع</button>
       </div>
 
       <div class="hamburger" id="hamburger">
@@ -67,51 +53,45 @@
             >
           </li>
           <li>
-            <a href="https://hs8oy.github.io/BDR/index-c.html"
-              >تـواصـل مـعـنـا</a
-            >
+            <a href="https://hs8oy.github.io/BDR/index.html"> تــســوق</a>
           </li>
         </ul>
       </nav>
-
       <div class="overlay" id="overlay"></div>
     </header>
+    <!--=============== END HEADER  ===============-->
+    <!-- contact us -->
+    <section class="cards contact" id="contact">
+      <div class="content">
+        <div class="card-2">
+          <div class="icon3">
+            <a
+              href="https://www.instagram.com/bdrparfum1?igsh=MXNmZHIxbWR0eXl2bA=="
+              ><i class="fa-brands fa-instagram"></i
+            ></a>
+          </div>
+          <div class="info3"><h3>انستغرام</h3></div>
+        </div>
 
-    <section class="st">
-      <div class="di">
-        <p>
-          <strong>
-            بيج تقسيم العطور الاصلية النيش واليدزاينر <br />
-            لا نتعامل بالعطور التقليد والكوبي ماستر <br />
-            متوفر توصيل لكافة المحافظات 5000 دينار
-          </strong>
-          <br />
-          <br />
-          3 مل 50 رشة <br />
-          5 مل 100 رشة <br />
-          10 مل 190 رشة
-        </p>
+        <div class="card-2">
+          <div class="icon3">
+            <a href="https://api.whatsapp.com/send?phone=9647707458798"
+              ><i class="fa-brands fa-whatsapp"></i
+            ></a>
+          </div>
+          <div class="info3"><h3>الواتساب</h3></div>
+        </div>
+
+        <div class="card-2">
+          <div class="icon3">
+            <a
+              href="https://www.facebook.com/profile.php?id=61566320968504&mibextid=ZbWKwL"
+              ><i class="fa-brands fa-facebook"></i
+            ></a>
+          </div>
+          <div class="info3"><h3>انستغرام</h3></div>
+        </div>
       </div>
-
-      <h2 class="title2">من المنتجات الرائعة للشركة BDR</h2>
-
-      <div class="container" id="productsContainer"></div>
-
-      <p
-        id="noResultsMessage"
-        style="
-          display: none;
-          font-weight: 700;
-          font-size: 24px;
-          text-align: center;
-          color: rgb(223, 0, 0);
-        "
-      >
-        جرب: <br />
-        • تأكد من عدم وجود الاخطاء الاملائية
-        <br />
-        • جرب مرة أخرى مع كلمات بحث مختلفة
-      </p>
     </section>
 
     <footer>
@@ -122,7 +102,6 @@
           href="https://www.instagram.com/bdrparfum1?igsh=MXNmZHIxbWR0eXl2bA=="
           ><i class="fa-brands fa-instagram"></i
         ></a>
-
         <a
           class="social-icon"
           href="https://www.facebook.com/profile.php?id=61566320968504&mibextid=ZbWKwL"
@@ -148,6 +127,5 @@
         overlay.classList.remove("active");
       });
     </script>
-    <script src="main.js"></script>
   </body>
 </html>
