@@ -12,13 +12,12 @@
 }
 
 /* ===== FIRST HEADER ===== */
-.btn-t{
+.btn-t {
   display: flex;
   align-items: center;
   justify-content: center;
-  
 }
-.st-btn{
+.st-btn {
   cursor: pointer;
   margin: 10px;
   background: #000000;
@@ -28,22 +27,20 @@
   font-size: 12px;
 }
 .logo img {
-  width: 70px;
+  width: 50px;
+  margin-top: 9px;
 }
-.sher{
+.sher {
   display: flex;
   align-items: center;
-
 }
 
-#backButton{
-  
+#backButton {
   font-weight: 700;
   padding: 5px;
   background: #b580371e;
   color: #fff;
   border-radius: 5px;
-
 }
 
 #searchInput {
@@ -227,6 +224,10 @@ nav.open {
   font-size: 15wpx;
   font-weight: 600;
 }
+
+.st-btn {
+  background-color: #333;
+}
 .container {
   display: flex;
   flex-direction: column;
@@ -363,8 +364,8 @@ footer div a:hover {
     padding: 10px 20px;
   }
 
-  .st .di {
-    font-size: 20px;
+  .di {
+    font-size: 18px;
     margin-bottom: 90px;
   }
   .st-img {
@@ -389,8 +390,9 @@ footer div a:hover {
     padding-bottom: 15px;
   }
 
-  .st-btn{
- font-size: 11px;
-    padding: 2px;
+  .st-btn {
+    margin: 2;
+    font-size: 10px;
+    background-color: #333;
   }
 }
