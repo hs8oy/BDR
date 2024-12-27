@@ -123,7 +123,7 @@ window.location.href = "product-info.html";  // الانتقال إلى صفحة
 
 function orderProduct(name) {
     const phoneNumber = "+9647707458798"; // ضع رقمك هنا
-    const message = `مـرحـبـا اريــد أطـلـب هـذا :
+    const message = ` مـرحـبـا اريــد أطـلـب هـذا  الـعـطـر :
 - الاسم: ${name}`;
     const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
     window.open(url, '_blank');
