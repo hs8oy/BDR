@@ -238,10 +238,10 @@
       }
 
       // دالة طلب المنتج عبر WhatsApp
-      function orderProduct(productName) {
-        const phoneNumber = "+9647707458798"; // رقم الهاتف
-       const message = ` مـرحـبـا اريــد أطـلـب هـذا  الـعـطر :\n
-        - الاسم: ${productName}`;
+      function orderProduct(name) {
+    const phoneNumber = "+9647707458798"; // ضع رقمك هنا
+    const message = ` مـرحـبـا اريــد أطـلـب هـذا  الـعـطـر :
+- الاسم: ${name}`;
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
           message
         )}`;
