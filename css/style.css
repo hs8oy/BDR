@@ -144,7 +144,7 @@ nav.open {
   visibility: visible;
 }
 .hamburger.open div:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
+  transform: rotate(45deg) translate(1px, 1px);
 }
 
 .hamburger.open div:nth-child(2) {
@@ -152,7 +152,7 @@ nav.open {
 }
 
 .hamburger.open div:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
+  transform: rotate(-45deg) translate(1px, -1px);
 }
 
 /* ===== END HEADER ===== */
