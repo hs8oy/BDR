@@ -3,15 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!--=============== INFORMATION ===============-->
     <meta name="description" content="هـنـا اسـعـار كـل تـقـاسـيـم مـتـجـر BDR" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="keywords" content="BDR , bdr , العطور , عطور , عطور اصلية , عطر سوفاج , جان بول , ديور , عطور بدر ">
     <meta name="author" content="hs8oy" />
     <title>مـتـجـر BDR | المعلومات</title>
-    <!--=============== LINK IN CSS  ===============-->
     <link rel="stylesheet" href="css/style-c.css" />
-    <!--=============== FONT AWESOME CDN  ===============-->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
@@ -19,7 +16,6 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-    <!--=============== LINK ICON ===============-->
     <link rel="icon" href="imgs/logo/logo.icon" />
 
     <style>
@@ -30,6 +26,9 @@
         background-size: cover;
         margin: 0;
         padding: 0;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
       }
 
       /* تنسيق الهيدر */
@@ -43,26 +42,24 @@
 
       /* تنسيق القسم الذي يحتوي على معلومات المنتج */
       .product-info {
-        /* لضمان عدم تداخل الكارد مع الهيدر */
+        flex: 1;
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
-        padding: 10px 20px 150px 20px;
+        padding: 10px 20px;
+        margin: 80px 0;
       }
 
       /* تنسيق تفاصيل المنتج */
       .product-info #product-details {
         background: #fff;
-        margin-top: 100px;
-        margin-bottom: 30px;
-        margin: 0 250px;
         padding: 10px 50px;
         border-radius: 8px;
         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
         text-align: center;
-        margin-top: 100px;
-        margin-bottom: 30px;
+        width: 80%;
+        max-width: 800px;
       }
 
       /* تنسيق الصورة داخل الكارد */
@@ -115,6 +112,34 @@
         background-color: #555;
       }
 
+      /* تنسيق الفوتر */
+      footer {
+        background-color: #333;
+        color: white;
+        text-align: center;
+        padding: 20px 40px;
+        width: 100%;
+        margin-top: auto;
+      }
+
+      footer h1 {
+        margin: 0;
+        font-size: 15px;
+        margin-bottom: 10px;
+      }
+
+      footer .social-icon {
+        color: white;
+        font-size: 20px;
+        margin: 0 10px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+      }
+
+      footer .social-icon:hover {
+        color: #ddd;
+      }
+
       @media only screen and (max-width: 900px) {
         .product-info img {
           width: 200px;
@@ -131,6 +156,11 @@
         .back-btn,
         .order-btn {
           font-size: 10px;
+        }
+
+        .product-info #product-details {
+          width: 90%;
+          padding: 10px 20px;
         }
       }
 
@@ -162,14 +192,11 @@
         <img src="imgs/logo/logo-p.jpg" />
       </div>
 
-
       <div class="hamburger" id="hamburger">
         <div></div>
         <div></div>
         <div></div>
       </div>
-
-      
 
       <nav id="nav">
         <div class="logo">
@@ -182,7 +209,6 @@
           <li>
             <a href="https://hs8oy.github.io/BDR/index-c.html">تـواصـل مـعـنـا</a>
           </li>
-
           <li>
             <a href="https://hs8oy.github.io/BDR/index.html"> تــســوق</a>
           </li>
@@ -190,7 +216,6 @@
       </nav>
       <div class="overlay" id="overlay"></div>
     </header>
-    <!--=============== END HEADER  ===============-->
 
     <!--=============== PRODUCT INFO SECTION ===============-->
     <section class="product-info">
@@ -238,18 +263,15 @@
       }
 
       // دالة طلب المنتج عبر WhatsApp
-      function orderProduct(name) {
-    const phoneNumber = "+9647707458798"; // ضع رقمك هنا
-    const message = ` مـرحـبـا اريــد أطـلـب هـذا  الـعـطـر :
-- الاسم: ${name}`;
+      function orderProduct(productName) {
+        const phoneNumber = "+9647707458798";
+        const message = `مـرحـبـا، أريد طلب هذا المنتج:\n- الاسم: ${productName}`;
         const url = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(
           message
         )}`;
         window.open(url, "_blank");
       }
-    </script>
 
-    <script>
       const hamburger = document.getElementById("hamburger");
       const nav = document.getElementById("nav");
       const overlay = document.getElementById("overlay");
